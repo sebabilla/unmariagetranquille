@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="Acte" load_steps=15 format=3 uid="uid://22q01na5nub2"]
+
+[ext_resource type="AudioStream" uid="uid://dgurk32gw3nyr" path="res://audio/silence.mp3" id="1_2wolw"]
+[ext_resource type="Script" path="res://ressources_dialogues/acte.gd" id="1_jwfdt"]
+[ext_resource type="Script" path="res://ressources_dialogues/choix.gd" id="2_t8sn5"]
+[ext_resource type="Texture2D" uid="uid://p2npxt2s0tym" path="res://images_decors/ville_zoom.png" id="2_uw2h7"]
+[ext_resource type="Script" path="res://ressources_dialogues/ligne.gd" id="3_tk5xa"]
+[ext_resource type="Script" path="res://ressources_dialogues/dialogue.gd" id="4_abfac"]
+[ext_resource type="Texture2D" uid="uid://3aufjqrharc6" path="res://images_ui/fond_sombre.png" id="5_surg7"]
+
+[sub_resource type="Resource" id="Resource_pujqt"]
+script = ExtResource("2_t8sn5")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 1
+
+[sub_resource type="Resource" id="Resource_ojnw5"]
+script = ExtResource("3_tk5xa")
+code_traduction = "A2100"
+code_personnage = "DEV"
+emotion = "RIEN"
+choix = Array[ExtResource("2_t8sn5")]([SubResource("Resource_pujqt")])
+
+[sub_resource type="Resource" id="Resource_3iy64"]
+script = ExtResource("2_t8sn5")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 2
+
+[sub_resource type="Resource" id="Resource_k1sv6"]
+script = ExtResource("3_tk5xa")
+code_traduction = "A2101"
+code_personnage = "DEV"
+emotion = "RIEN"
+choix = Array[ExtResource("2_t8sn5")]([SubResource("Resource_3iy64")])
+
+[sub_resource type="Resource" id="Resource_k6fm2"]
+script = ExtResource("2_t8sn5")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = -22
+
+[sub_resource type="Resource" id="Resource_jbu05"]
+script = ExtResource("3_tk5xa")
+code_traduction = "A2102"
+code_personnage = "DEV"
+emotion = "RIEN"
+choix = Array[ExtResource("2_t8sn5")]([SubResource("Resource_k6fm2")])
+
+[sub_resource type="Resource" id="Resource_swtac"]
+script = ExtResource("4_abfac")
+dialogue = Array[ExtResource("3_tk5xa")]([SubResource("Resource_ojnw5"), SubResource("Resource_k1sv6"), SubResource("Resource_jbu05")])
+
+[resource]
+script = ExtResource("1_jwfdt")
+decor = ExtResource("2_uw2h7")
+fond = ExtResource("5_surg7")
+ligne_de_depart = 0
+dialogue = SubResource("Resource_swtac")
+bruitage = ExtResource("1_2wolw")

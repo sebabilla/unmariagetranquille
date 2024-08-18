@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Acte" load_steps=11 format=3 uid="uid://4y37egfublsj"]
+
+[ext_resource type="Script" path="res://ressources_dialogues/acte.gd" id="1_hkf0c"]
+[ext_resource type="AudioStream" uid="uid://dgurk32gw3nyr" path="res://audio/silence.mp3" id="1_o8jgv"]
+[ext_resource type="Texture2D" uid="uid://ygaxf3w7jryy" path="res://images_decors/decor_vide.png" id="1_tny0f"]
+[ext_resource type="Script" path="res://ressources_dialogues/choix.gd" id="2_d7pyo"]
+[ext_resource type="Script" path="res://ressources_dialogues/ligne.gd" id="3_1mvjo"]
+[ext_resource type="Script" path="res://ressources_dialogues/dialogue.gd" id="4_0rsdu"]
+[ext_resource type="Texture2D" uid="uid://3aufjqrharc6" path="res://images_ui/fond_sombre.png" id="5_u0107"]
+
+[sub_resource type="Resource" id="Resource_ar86t"]
+script = ExtResource("2_d7pyo")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = -21
+
+[sub_resource type="Resource" id="Resource_fkdid"]
+script = ExtResource("3_1mvjo")
+code_traduction = "A2000"
+code_personnage = "DEV"
+emotion = "RIEN"
+choix = Array[ExtResource("2_d7pyo")]([SubResource("Resource_ar86t")])
+
+[sub_resource type="Resource" id="Resource_boupn"]
+script = ExtResource("4_0rsdu")
+dialogue = Array[ExtResource("3_1mvjo")]([SubResource("Resource_fkdid")])
+
+[resource]
+script = ExtResource("1_hkf0c")
+decor = ExtResource("1_tny0f")
+fond = ExtResource("5_u0107")
+ligne_de_depart = 0
+dialogue = SubResource("Resource_boupn")
+bruitage = ExtResource("1_o8jgv")

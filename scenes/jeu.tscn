@@ -1,0 +1,86 @@
+[gd_scene load_steps=10 format=3 uid="uid://chdycqh8imnir"]
+
+[ext_resource type="Script" path="res://scenes/jeu.gd" id="1_7ohk8"]
+[ext_resource type="Texture2D" uid="uid://3aufjqrharc6" path="res://images_ui/fond_sombre.png" id="2_rl2ru"]
+[ext_resource type="Texture2D" uid="uid://ygaxf3w7jryy" path="res://images_decors/decor_vide.png" id="3_26sog"]
+[ext_resource type="Texture2D" uid="uid://fugfdap1e10q" path="res://images_ui/cadre2.png" id="3_wsopk"]
+[ext_resource type="PackedScene" uid="uid://cb087ifs8bmol" path="res://scenes/personnage.tscn" id="4_vd2kd"]
+[ext_resource type="PackedScene" uid="uid://buslnlgx0qoj7" path="res://scenes/boutons_et_menu.tscn" id="5_avr7v"]
+[ext_resource type="PackedScene" uid="uid://bvfpdsoa20505" path="res://scenes/barre_d_amour.tscn" id="6_0tqjn"]
+[ext_resource type="AudioStream" uid="uid://dgurk32gw3nyr" path="res://audio/silence.mp3" id="8_r5gnj"]
+[ext_resource type="AudioStream" uid="uid://c4pyunadpsok4" path="res://audio/Confidencias.mp3" id="9_vfoxj"]
+
+[node name="Altar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ohk8")
+
+[node name="Fond" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_rl2ru")
+
+[node name="Decor" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_right = 240.0
+offset_bottom = 270.0
+grow_horizontal = 2
+texture = ExtResource("3_26sog")
+
+[node name="Cadre" type="TextureRect" parent="Decor"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_wsopk")
+
+[node name="Personnage" parent="." instance=ExtResource("4_vd2kd")]
+layout_mode = 0
+offset_top = 110.0
+offset_bottom = 270.0
+
+[node name="BarreDAmour" parent="." instance=ExtResource("6_0tqjn")]
+layout_mode = 1
+
+[node name="BoutonsEtMenu" parent="." instance=ExtResource("5_avr7v")]
+layout_mode = 1
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_right = 640.0
+offset_bottom = 275.0
+grow_horizontal = 1
+
+[node name="Transition" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="BruitageActe" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_r5gnj")
+
+[node name="Confidencias" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_vfoxj")
+volume_db = -6.0
+
+[connection signal="ligne_de_dialogue_affichee" from="Personnage" to="." method="_on_personnage_ligne_de_dialogue_affichee"]
+[connection signal="acte_suivant" from="BoutonsEtMenu" to="." method="_on_boutons_et_menu_acte_suivant"]
+[connection signal="langue_changee" from="BoutonsEtMenu" to="." method="_on_boutons_et_menu_langue_changee"]
+[connection signal="musique_changee" from="BoutonsEtMenu" to="." method="_on_boutons_et_menu_musique_changee"]
+[connection signal="replique_suivante" from="BoutonsEtMenu" to="." method="_on_boutons_et_menu_replique_suivante"]

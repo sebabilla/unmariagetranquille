@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="Acte" load_steps=17 format=3 uid="uid://dmomhpv1cv3un"]
+
+[ext_resource type="Script" path="res://ressources_dialogues/acte.gd" id="1_bxlri"]
+[ext_resource type="Texture2D" uid="uid://xvdwnaoketj5" path="res://images_decors/facade_eglise_zoom.png" id="1_e6d0y"]
+[ext_resource type="AudioStream" uid="uid://t46d8jq8e2s1" path="res://audio/pas_feutres.mp3" id="1_g2uyh"]
+[ext_resource type="Script" path="res://ressources_dialogues/choix.gd" id="2_j6agg"]
+[ext_resource type="Script" path="res://ressources_dialogues/ligne.gd" id="3_krjm5"]
+[ext_resource type="Script" path="res://ressources_dialogues/dialogue.gd" id="4_ag132"]
+[ext_resource type="Texture2D" uid="uid://3aufjqrharc6" path="res://images_ui/fond_sombre.png" id="5_8cd41"]
+
+[sub_resource type="Resource" id="Resource_yonii"]
+script = ExtResource("2_j6agg")
+code_traduction = "C1800"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 1
+
+[sub_resource type="Resource" id="Resource_vbcaf"]
+script = ExtResource("3_krjm5")
+code_traduction = "A1800"
+code_personnage = "MARIPOSA"
+emotion = "JOIE"
+choix = Array[ExtResource("2_j6agg")]([SubResource("Resource_yonii")])
+
+[sub_resource type="Resource" id="Resource_jncx1"]
+script = ExtResource("2_j6agg")
+code_traduction = "C1801"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 2
+
+[sub_resource type="Resource" id="Resource_cq5yo"]
+script = ExtResource("3_krjm5")
+code_traduction = "A1801"
+code_personnage = "MARIPOSA"
+emotion = "NEUTRALITE"
+choix = Array[ExtResource("2_j6agg")]([SubResource("Resource_jncx1")])
+
+[sub_resource type="Resource" id="Resource_3yrb5"]
+script = ExtResource("2_j6agg")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 3
+
+[sub_resource type="Resource" id="Resource_ubt3o"]
+script = ExtResource("3_krjm5")
+code_traduction = "A1802"
+code_personnage = "MARIPOSA"
+emotion = "NEUTRALITE"
+choix = Array[ExtResource("2_j6agg")]([SubResource("Resource_3yrb5")])
+
+[sub_resource type="Resource" id="Resource_obl87"]
+script = ExtResource("2_j6agg")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = -21
+
+[sub_resource type="Resource" id="Resource_oq3wm"]
+script = ExtResource("3_krjm5")
+code_traduction = "A1803"
+code_personnage = "MARIPOSA"
+emotion = "NEUTRALITE"
+choix = Array[ExtResource("2_j6agg")]([SubResource("Resource_obl87")])
+
+[sub_resource type="Resource" id="Resource_ekxxu"]
+script = ExtResource("4_ag132")
+dialogue = Array[ExtResource("3_krjm5")]([SubResource("Resource_vbcaf"), SubResource("Resource_cq5yo"), SubResource("Resource_ubt3o"), SubResource("Resource_oq3wm")])
+
+[resource]
+script = ExtResource("1_bxlri")
+decor = ExtResource("1_e6d0y")
+fond = ExtResource("5_8cd41")
+ligne_de_depart = 0
+dialogue = SubResource("Resource_ekxxu")
+bruitage = ExtResource("1_g2uyh")

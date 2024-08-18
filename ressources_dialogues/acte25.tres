@@ -1,0 +1,111 @@
+[gd_resource type="Resource" script_class="Acte" load_steps=21 format=3 uid="uid://bnuqyccppqdlp"]
+
+[ext_resource type="Texture2D" uid="uid://ct7s1o0c1iuik" path="res://images_decors/jardin_zoom.png" id="1_bgq6f"]
+[ext_resource type="AudioStream" uid="uid://rk380mmssqtq" path="res://audio/pluie.mp3" id="1_y2x4l"]
+[ext_resource type="Script" path="res://ressources_dialogues/choix.gd" id="2_l7gbp"]
+[ext_resource type="Script" path="res://ressources_dialogues/ligne.gd" id="3_ddgl4"]
+[ext_resource type="Script" path="res://ressources_dialogues/dialogue.gd" id="4_oimwb"]
+[ext_resource type="Script" path="res://ressources_dialogues/acte.gd" id="5_82kff"]
+[ext_resource type="Texture2D" uid="uid://dtg7hey3dj8kh" path="res://images_ui/fond_sepia.png" id="5_t4dk3"]
+
+[sub_resource type="Resource" id="Resource_q2kxx"]
+script = ExtResource("2_l7gbp")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 1
+
+[sub_resource type="Resource" id="Resource_nw4p3"]
+script = ExtResource("3_ddgl4")
+code_traduction = "A1500"
+code_personnage = "MANUEL"
+emotion = "TRISTESSE"
+choix = Array[ExtResource("2_l7gbp")]([SubResource("Resource_q2kxx")])
+
+[sub_resource type="Resource" id="Resource_altim"]
+script = ExtResource("2_l7gbp")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 2
+
+[sub_resource type="Resource" id="Resource_vrx42"]
+script = ExtResource("3_ddgl4")
+code_traduction = "A1501"
+code_personnage = "DIEU"
+emotion = "NEUTRALITE"
+choix = Array[ExtResource("2_l7gbp")]([SubResource("Resource_altim")])
+
+[sub_resource type="Resource" id="Resource_umcm2"]
+script = ExtResource("2_l7gbp")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 3
+
+[sub_resource type="Resource" id="Resource_8rnoi"]
+script = ExtResource("3_ddgl4")
+code_traduction = "A1502"
+code_personnage = "MANUEL"
+emotion = "COLERE"
+choix = Array[ExtResource("2_l7gbp")]([SubResource("Resource_umcm2")])
+
+[sub_resource type="Resource" id="Resource_8ywr8"]
+script = ExtResource("2_l7gbp")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 4
+
+[sub_resource type="Resource" id="Resource_jgkpk"]
+script = ExtResource("3_ddgl4")
+code_traduction = "A1503"
+code_personnage = "MANUEL"
+emotion = "TRISTESSE"
+choix = Array[ExtResource("2_l7gbp")]([SubResource("Resource_8ywr8")])
+
+[sub_resource type="Resource" id="Resource_1jvde"]
+script = ExtResource("2_l7gbp")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 5
+
+[sub_resource type="Resource" id="Resource_alv0j"]
+script = ExtResource("3_ddgl4")
+code_traduction = "A1504"
+code_personnage = "DIEU"
+emotion = "NEUTRALITE"
+choix = Array[ExtResource("2_l7gbp")]([SubResource("Resource_1jvde")])
+
+[sub_resource type="Resource" id="Resource_cafsw"]
+script = ExtResource("2_l7gbp")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = -26
+
+[sub_resource type="Resource" id="Resource_vmc5p"]
+script = ExtResource("3_ddgl4")
+code_traduction = "A1505"
+code_personnage = "DIEU"
+emotion = "COLERE"
+choix = Array[ExtResource("2_l7gbp")]([SubResource("Resource_cafsw")])
+
+[sub_resource type="Resource" id="Resource_ijubk"]
+script = ExtResource("4_oimwb")
+dialogue = Array[ExtResource("3_ddgl4")]([SubResource("Resource_nw4p3"), SubResource("Resource_vrx42"), SubResource("Resource_8rnoi"), SubResource("Resource_jgkpk"), SubResource("Resource_alv0j"), SubResource("Resource_vmc5p")])
+
+[resource]
+script = ExtResource("5_82kff")
+decor = ExtResource("1_bgq6f")
+fond = ExtResource("5_t4dk3")
+ligne_de_depart = 0
+dialogue = SubResource("Resource_ijubk")
+bruitage = ExtResource("1_y2x4l")

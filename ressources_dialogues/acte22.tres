@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="Acte" load_steps=17 format=3 uid="uid://dvf02lafsps64"]
+
+[ext_resource type="AudioStream" uid="uid://dch2fvyuiujtc" path="res://audio/foule.mp3" id="1_fkftv"]
+[ext_resource type="Script" path="res://ressources_dialogues/acte.gd" id="1_nwe7x"]
+[ext_resource type="Texture2D" uid="uid://d3d1rsdaqoucs" path="res://images_decors/facade_eglise.png" id="1_w2hiv"]
+[ext_resource type="Script" path="res://ressources_dialogues/choix.gd" id="2_f5xyp"]
+[ext_resource type="Script" path="res://ressources_dialogues/ligne.gd" id="3_q321d"]
+[ext_resource type="Script" path="res://ressources_dialogues/dialogue.gd" id="4_fox3e"]
+[ext_resource type="Texture2D" uid="uid://3aufjqrharc6" path="res://images_ui/fond_sombre.png" id="5_1gi8r"]
+
+[sub_resource type="Resource" id="Resource_w1wgc"]
+script = ExtResource("2_f5xyp")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 1
+
+[sub_resource type="Resource" id="Resource_nt3te"]
+script = ExtResource("3_q321d")
+code_traduction = "A2200"
+code_personnage = "PRETRE"
+emotion = "GENE"
+choix = Array[ExtResource("2_f5xyp")]([SubResource("Resource_w1wgc")])
+
+[sub_resource type="Resource" id="Resource_od52s"]
+script = ExtResource("2_f5xyp")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 2
+
+[sub_resource type="Resource" id="Resource_2mc8r"]
+script = ExtResource("3_q321d")
+code_traduction = "A2201"
+code_personnage = "MANUEL"
+emotion = "NEUTRALITE"
+choix = Array[ExtResource("2_f5xyp")]([SubResource("Resource_od52s")])
+
+[sub_resource type="Resource" id="Resource_4w5vp"]
+script = ExtResource("2_f5xyp")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 3
+
+[sub_resource type="Resource" id="Resource_2xj6b"]
+script = ExtResource("3_q321d")
+code_traduction = "A2202"
+code_personnage = "VIDE"
+emotion = "RIEN"
+choix = Array[ExtResource("2_f5xyp")]([SubResource("Resource_4w5vp")])
+
+[sub_resource type="Resource" id="Resource_c0djq"]
+script = ExtResource("2_f5xyp")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = -1
+
+[sub_resource type="Resource" id="Resource_ktkjf"]
+script = ExtResource("3_q321d")
+code_traduction = "A2203"
+code_personnage = "GABRIEL"
+emotion = "JOIE"
+choix = Array[ExtResource("2_f5xyp")]([SubResource("Resource_c0djq")])
+
+[sub_resource type="Resource" id="Resource_biqde"]
+script = ExtResource("4_fox3e")
+dialogue = Array[ExtResource("3_q321d")]([SubResource("Resource_nt3te"), SubResource("Resource_2mc8r"), SubResource("Resource_2xj6b"), SubResource("Resource_ktkjf")])
+
+[resource]
+script = ExtResource("1_nwe7x")
+decor = ExtResource("1_w2hiv")
+fond = ExtResource("5_1gi8r")
+ligne_de_depart = 0
+dialogue = SubResource("Resource_biqde")
+bruitage = ExtResource("1_fkftv")
