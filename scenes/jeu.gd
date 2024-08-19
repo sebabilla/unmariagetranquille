@@ -89,7 +89,7 @@ func _on_boutons_et_menu_acte_suivant(numero_acte: int) -> void:
 			Globals.fins[1] = true
 			$BoutonsEtMenu.actualiser_affichage_reglages()
 		-17: # Choix des conclusions
-			if Globals.amour > 18: # trop bien pour être honnête
+			if Globals.amour > 17: # trop bien pour être honnête
 				acte_en_cours = acte18
 				Globals.fins[2] = true
 				$BoutonsEtMenu.actualiser_affichage_reglages()
@@ -122,7 +122,7 @@ func _on_boutons_et_menu_acte_suivant(numero_acte: int) -> void:
 func nouvel_acte(acte: Acte) -> void:
 	$Transition.show()
 	var assombrir: Tween = create_tween()
-	assombrir.tween_property($Transition, "color:a", 1, 0.5).from(0)
+	assombrir.tween_property($Transition, "color:a", 1, 1).from(0)
 	await assombrir.finished
 	
 	# Une fois la la seine lancée, tout reste tel quel, sauf lire_dialogue() qui
@@ -135,7 +135,7 @@ func nouvel_acte(acte: Acte) -> void:
 	lire_dialogue(acte.ligne_de_depart)
 	
 	var eclaircir: Tween = create_tween()
-	eclaircir.tween_property($Transition, "color:a", 0, 0.2)
+	eclaircir.tween_property($Transition, "color:a", 0, 0.6)
 	await eclaircir.finished
 	$Transition.hide()
 
