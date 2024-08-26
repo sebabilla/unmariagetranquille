@@ -1,6 +1,7 @@
 extends TextureRect
 
 signal ligne_de_dialogue_affichee
+signal ajouter_au_recap(ligne: String)
 
 var nom_du_personnage: String
 var personnages: Array[Texture] = [
@@ -43,6 +44,9 @@ func lire_ligne(ligne: Ligne) -> void:
 	afficher_emoji(ligne.emotion)
 	montrer_replique()
 
+# le nom_du_personnage est utilisé par afficher_texte_replique() pour le mettre au
+# début de chaque nouveau bout de texte, alors que l'image ne changere que lors de
+# l'entree d'un nouveau perso.
 func afficher_nouveau_personnage(nom: String) -> void:
 	nom_du_personnage = nom
 	afficher_image()
@@ -102,16 +106,18 @@ func afficher_emoji(emo: String) -> void:
 
 func afficher_texte_replique(rep: String) -> void:
 	var noeud: RichTextLabel = $FondDialogue/MarginContainer/LigneDeDialogue
-	if nom_du_personnage == "VIDE":
-		noeud.text = "[b]" + tr(rep) + "[/b]"
+	if nom_du_personnage == "VIDE": # Affiche les périodes (il y a 3 mois)
+		noeud.text = "[center][b]" + tr(rep) + "[/b][/center]"
 		on_lecture_ligne_complete()
 		return
 	noeud.text = "[b]" + tr(nom_du_personnage) + " : [/b]"+ tr(rep)
-	var taille_texte := noeud.text.length()
-	var debut_texte := nom_du_personnage.length()
-	var temps := taille_texte/Globals.vitesse_de_lecture
+	var taille_texte: float= noeud.text.length()
+	var debut_texte: float = nom_du_personnage.length()
+	var temps: float = taille_texte/Globals.vitesse_de_lecture
+	if temps > 4 :
+		temps = 4
 	var lecture_ligne: Tween = create_tween()
-	lecture_ligne.tween_property(noeud,"visible_characters", taille_texte, temps).from(debut_texte)
+	lecture_ligne.tween_property(noeud,"visible_ratio", 1, temps).from(debut_texte/taille_texte)
 	lecture_ligne.connect("finished", on_lecture_ligne_complete)
 
 func cacher_replique() -> void:
@@ -122,10 +128,13 @@ func montrer_replique() -> void:
 	$FondDialogue.show()
 	$Emoji.show()
 
+# Esthétique : pour décaler l'affichage du bouton SUIVANT
 func on_lecture_ligne_complete():
-	$FondDialogue/MarginContainer/LigneDeDialogue.visible_characters = -1
+	var ligne: RichTextLabel = $FondDialogue/MarginContainer/LigneDeDialogue
+	ligne.visible_ratio = 1
 	ligne_de_dialogue_affichee.emit()
+	ajouter_au_recap.emit(ligne.text)
 
-
+# Ouvrir les liens url dans le navigateur
 func _on_ligne_de_dialogue_meta_clicked(meta: Variant) -> void:
 	OS.shell_open(meta)

@@ -16,6 +16,7 @@ func _ready() -> void:
 	inactiver_tous_les_boutons()
 	actualiser_affichage_reglages()
 	_on_bouton_reglage_sortie_pressed()
+	_on_bouton_recap_sortie_pressed()
 
 # Utilisé par le scipt de jeu, prépare les boutons, mais n'affiche rien
 func charger_boutons(import_choix: Array[Choix]) -> void:
@@ -23,23 +24,31 @@ func charger_boutons(import_choix: Array[Choix]) -> void:
 	for numero in range(import_choix.size()):
 		var bouton: RichTextLabel = noeud_boutons.get_child(numero)
 		bouton.text = tr(import_choix[numero].code_traduction)
-		bouton.modulate = Color("#bcbace")
+		bouton.self_modulate = Color("#be8f68")
 		
 		
 func _on_button_0_pressed() -> void:
 	enregistrer_le_choix(0)
+	var ligne: String = $ContainerChoix/ListeBoutons/Label0.text
+	mise_a_jour_recap(ligne)
 	
 func _on_button_1_pressed() -> void:
 	enregistrer_le_choix(1)
+	var ligne: String = $ContainerChoix/ListeBoutons/Label1.text
+	mise_a_jour_recap(ligne)
 	
 func _on_button_2_pressed() -> void:
 	enregistrer_le_choix(2)
+	var ligne: String = $ContainerChoix/ListeBoutons/Label2.text
+	mise_a_jour_recap(ligne)
 
 # Reaction selon le choix du joueur	
 func enregistrer_le_choix(numero: int) -> void:
 	Globals.amour += choix_possibles[numero].point_d_amour
 	Globals.genre_toi = choix_possibles[numero].genre_toi
 	Globals.interet_dieu = choix_possibles[numero].interet_dieu
+	
+	inactiver_tous_les_boutons()
 	
 	var suite = choix_possibles[numero].ligne
 	if suite < 0:
@@ -48,7 +57,6 @@ func enregistrer_le_choix(numero: int) -> void:
 		acte_suivant.emit(suite)
 	else:
 		replique_suivante.emit(suite)
-	inactiver_tous_les_boutons()
 
 # Cache et inactive les boutons sans changer leur contenu
 func inactiver_bouton_choix(numero: int) -> void:
@@ -110,6 +118,8 @@ func _on_bouton_reglages_entree_pressed() -> void:
 	$OuvertureReglages/BoutonReglagesEntree.release_focus()
 	$OuvertureReglages/BoutonReglagesEntree.hide()
 	$OuvertureReglages/BoutonReglagesEntree.disabled = true
+	$OuvertureReglages/BoutonRecapEntree.hide()
+	$OuvertureReglages/BoutonRecapEntree.disabled = true
 	await tween.finished
 	$OuvertureReglages/BoutonReglageSortie.show()
 	$OuvertureReglages/BoutonReglageSortie.disabled = false
@@ -121,6 +131,8 @@ func _on_bouton_reglage_sortie_pressed() -> void:
 	$OuvertureReglages/BoutonReglageSortie.release_focus()
 	$OuvertureReglages/BoutonReglageSortie.hide()
 	$OuvertureReglages/BoutonReglageSortie.disabled = true
+	$OuvertureReglages/BoutonRecapEntree.show()
+	$OuvertureReglages/BoutonRecapEntree.disabled = false
 	await tween.finished
 	$OuvertureReglages/BoutonReglagesEntree.show()
 	$OuvertureReglages/BoutonReglagesEntree.disabled = false
@@ -192,7 +204,6 @@ func _on_check_sons_toggled(_toggled_on: bool) -> void:
 	Globals.effets_sonores = not Globals.effets_sonores
 	actualiser_affichage_reglages()
 	
-
 func actualiser_affichage_reglages() -> void:	
 	afficher_langue()
 	afficher_vitesse()
@@ -200,4 +211,38 @@ func actualiser_affichage_reglages() -> void:
 	afficher_effets_sonores()
 	afficher_fins()
 	
+	
+# Voir ou non le recap
+func _on_bouton_recap_entree_pressed() -> void:
+	$OuvertureReglages/BoutonRecapEntree.release_focus()
+	$OuvertureReglages/BoutonRecapEntree.hide()
+	$OuvertureReglages/BoutonRecapEntree.disabled = true
+	$OuvertureReglages/BoutonReglagesEntree.hide()
+	$OuvertureReglages/BoutonReglagesEntree.disabled = true
+	$OuvertureReglages/BoutonRecapSortie.show()
+	$OuvertureReglages/BoutonRecapSortie.disabled = false
+	$FondRecap.show()
+	$FondRecap/TexteRecap.ouverture()
+	$OuvertureReglages/BoutonRecapSortie.grab_focus()
 
+func _on_bouton_recap_sortie_pressed() -> void:
+	$OuvertureReglages/BoutonRecapSortie.release_focus()
+	$OuvertureReglages/BoutonRecapSortie.hide()
+	$OuvertureReglages/BoutonRecapSortie.disabled = true
+	$OuvertureReglages/BoutonRecapEntree.show()
+	$OuvertureReglages/BoutonRecapEntree.disabled = false
+	$OuvertureReglages/BoutonReglagesEntree.show()
+	$OuvertureReglages/BoutonReglagesEntree.disabled = false
+	$FondRecap.hide()
+	$OuvertureReglages/BoutonRecapEntree.grab_focus()
+
+func mise_a_jour_recap(ligne: String) -> void:
+	var regex := RegEx.new()
+	regex.compile("\\[.+?\\]")
+	ligne = regex.sub(ligne, "", true)
+	if ligne == "SUIVANT":
+		return
+	$FondRecap/TexteRecap.text += ligne + "\n"
+
+func vider_recap() -> void:
+	$FondRecap/TexteRecap.text = ""

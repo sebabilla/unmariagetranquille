@@ -14,7 +14,7 @@ GABRIEL,Gabriel,Gabriel
 MARIPOSA,Mariposa,Mariposa
 LORENA,Lorena,Lorena
 MANUEL,Manuel,Manuel
-PRETRE,Prêtre,Prêtre
+PRETRE,Prêtre,Priest
 MARIPOSA_ET_TOI,Mariposa et toi,Mariposa and you
 DIEU_ET_LORENA,Dieu et Lorena,God and Lorena
 DIEU_ET_MANUEL,Dieu et Manuel,God and Manuel
@@ -46,7 +46,7 @@ ACTE3,,
 A0300,"Alors, c’te Mariposa ?","So, Mariposa?"
 C0300,"Alors, je crois que je l’aime !",So I think I love her!
 A0301,"Tu l’aimes ? Mais, tu l’as rencontrée hier !",You love her? But you met her yesterday!
-A0302,C’est pas pa’ce qu’elle t’as fait danser toute la nuit que… [i]je l’aime ![/i] T’es sérieux ?,Just ‘cause she made you dance all night doesn't mean... [i]I love her![/i] Are you serious?
+A0302,C’est pas pa’ce qu’elle t’as fait danser toute la nuit que… [i]Je l’aime ![/i] T’es sérieux ?,Just ‘cause she made you dance all night doesn't mean... [i]I love her![/i] Are you serious?
 C0301,Gaby…,Gab…
 A0303,"Bien, bien, danse avec ton p’tit papillon. Mais, t’laisse pas étourdir par son nectar.","Fine, fine, dance with your lil butterfly. But don't let her nectar make you dizzy."
 ACTE4,,
@@ -60,7 +60,7 @@ C0402,"(Marmonnement) Rassuré… [p]moi, je le serai si elle dit oui…[/p]",(M
 C0403,"Tu es bien clément, Dieu. [p]Même pas une p’tite pichenette à ce curé ?[/p]","You are very merciful, God. [p]Not even a little poke at that priest?[/p]"
 A0404,"Hum, hum. Quoi qu’il en soit, allez prendre place avant que la mariée n’arrive !","Hum, hum. Whatever, go and take your seats before the bride arrives!"
 A0405,"(Chuchotement) Un dernier conseil, quoi qu’elle te dise, ne baisse jamais les yeux devant un Mamani, tu m’entends, jamais !","(Whispering) One last piece of advice, whatever she tells you, never lower your eyes to a Mamani, you hear me, never!"
-C0404,"(Chuchotement) Mais, c’est une idée fixe !",(Whispering) What a nagging thought!
+C0404,"(Chuchotement) Mais, c’est une idée fixe chez lui !",(Whispering) What a nagging thought!
 A0406,Ne me tente pas…,Don't tempt me…
 ACTE5,,
 A0500,Trois jours après ta rencontre avec Mariposa.,Three days after you first met Mariposa.
@@ -76,10 +76,10 @@ A0506,"Gabriel, qui t’as aidé à t’défendre cont’ la grande Sofia en mat
 C0503,Impossible…,No way… 
 A0507,Gabriel qu’a toujours été à tes côtés.,"Gabriel, who has always stood by you."
 C0504,"Dieu, Dieu va…","God, God is going to…"
-A0508,Et bien tu en fais une tête ! Qu’est-ce que Gabriel racontait encore comme bêtise ?,"Wow, what a face! What other nonsense was Gabriel talking about?"
+A0508,"Et bien, tu en fais une tête ! Qu’est-ce que Gabriel racontait encore comme bêtise ?","Wow, what a face! What other nonsense was Gabriel talking about?"
 ACTE6,,
 A0600,(Chuchotement) Vous ne devriez pas être ici !,(Whispering) You shouldn't be here!
-C0600,Madame !,Madam!
+C0600,Madame Mamani !,Madam!
 A0601,(Chuchotement) Écoutez donc au lieu de vous exclamer. Avant que ma fille et son père n’arrivent.,(Whispering) Listen instead of shouting. Before my daughter and her father arrive.
 A0602,"(Chuchotement) Ma fille semble être très heureuse avec vous, je vous l’accorde. Mais, j’espérais quelque chose de différent pour elle…","(Whispering) My daughter seems very happy with you, I'll give you that. But I was hoping for something different for her..."
 A0603,"Madame, je t’promets, ta fille, elle trouvera pas mieux qu’mon…","Ma'am, I promise, your daughter won't do nothing better than my…"
@@ -122,7 +122,7 @@ A0803,Gabriel ! Tu sais très bien que c’est pas ce que je veux dire !,Gabri
 A0804,"Enfin, je suppose que tu veux que je te conduise jusqu’à l’autel ?","Anyway, I suppose you want me to walk you down the aisle?"
 C0800,Je…,I…
 A0805,Bien sûr ! N’ai-je pas toujours été un père pour toi ?,"Of course you want! I've always been like a father to you, haven't I?"
-A0806,"Alors, elle est quand cette petite fête ?",So when is this little party?
+A0806,"Alors, elle est quand cette petite fête ?","So, when is this little party?"
 ACTE9,,
 A0900,"Vous savez, vous ne devriez pas être ici.","You know, you shouldn't be here."
 A0901,Papa !,Dad!
@@ -131,8 +131,8 @@ C0901,"Mais, vous êtes tous comme ça dans [p]ta [i]putain[/i] de famille ?[/p
 A0902,"Ne vous méprenez pas. Aucun jugement de valeur. C’est juste que… Dans la voiture, je racontais justement à Mariposa que…","Don't get me wrong. No value judgement. It's just that... In the car, I was just telling Mariposa that…"
 A0903,Mon père me racontait un secret de famille que tout le monde connaît.,My father was telling me a family secret that everyone knows.
 A0904,Hum.,Hum.
-A0905,Nous ne t’avons pas fait attendre au moins ? Mon père ne voulait pas me laisser sortir de la Bentley avant de m’avoir raconté tous les détails.,"We didn't keep you waiting, did we? My father wouldn't let me out of the Bentley until he'd told me all the details."
-C0902,"Une, une Bentley ?",A B… Bentley?
+A0905,Nous ne t’avons pas fait attendre au moins ? Mon père ne voulait pas me laisser sortir de la Bentley avant de m’avoir raconté [i]tous[/i] les détails.,"We didn't keep you waiting, did we? My father wouldn't let me out of the Bentley until he'd told me [i]all[/i] the details."
+C0902,"Une, une Bentley ?",A Ben… Bentley?
 A0906,"De location, les Mamani ne sont pas [i]si[/i] riches que ça. Mais, il paraît que pour le statut, ça compte.","For rent, the Mamani are not [i]that[/i] wealthy. But it seems that status matters."
 C0903,"Oui, tu es une Mamani, et moi… [p]je n’ai même pas un vrai nom.[/p]","Yes, you're a Mamani, and I... [p]I don't even have a proper name.[/p]"
 A0907,"Oh [i]toi[/i]. Tu ne vas pas t’y mettre. Tu verras, on est une famille dysfonctionnelle comme les autres. N’est-ce pas, Papa ?","Oh [i]you[/i]! You're not going to start that. You'll see, we're just another dysfunctional family. Right, Dad?"
@@ -146,9 +146,9 @@ A1000,Il y a deux mois.,Two months ago.
 A1001,Tu ne voudrais pas te marier ?,Would you like to marry me?
 C1000,Tu sors ça comme ça ?,Just like that? No warning ?
 A1002,"Je t’aime, tu m’aimes. Alors, pourquoi pas ?","I love you, you love me. Then why not?"
-C1001,"Mais, avec une Mamani ? [p]Jamais on n’acceptera que…[/p]","But, with a Mamani? [p] They'll never accept that...[/p]"
-A1003,"Ah non. Pas de ça. On est au 21e siècle, non ? Bien sûr qu’on t’acceptera.","Do not ! Don't say that. This is the 21e century, isn't it? Of course they'll accept you."
-A1004,"Et puis, je suis entouré de trop de gens qui font tout bien comme il faut. Ou qui font semblant de le faire.","Besides, I'm surrounded by too many people that do everything right. Or pretend to."
+C1001,"Mais, moi avec une Mamani ? [p]Jamais on n’acceptera que…[/p]","But, with a Mamani? [p] They'll never accept that...[/p]"
+A1003,"Ah non. Pas de ça. On est au 21e siècle, non ? [i]Bien sûr[/i] qu’on t’acceptera.","Do not ! Don't say that. This is the 21e century, isn't it? [i]Of course[/i] they'll accept you."
+A1004,"Et puis, je suis entouré de trop de gens qui font tout bien comme il faut... Ou qui font semblant de le faire…","Besides, I'm surrounded by too many people that do everything right… Or pretend to..."
 A1005,"Alors, t’en dit quoi ?","So, your answer?"
 ACTE11,,
 A1100,… Je vous invite à vous prendre par la main.,...in sacred trust. Please hold hands.
@@ -156,7 +156,7 @@ C1100,"Mariposa, veux-tu être ma femme ?","Mariposa, will you be my wife?"
 A1101,"Oui, je veux être ta femme. Et toi, veux-tu être…","Yes, I want to be your wife. And you, will you …"
 A1102,Devrais-tu être ici ?,Should you be here ?
 C1101,"Je, je...","Er, I, er…"
-C1102,"Oui, je suis bien, ici, avec toi.","Yes, I'm perfectly fine here with you."
+C1102,"Oui, je suis bien, ici, avec toi.","Yes, I'm perfectly fine, here, with you."
 A1103,Hum. Ce n’est pas…,Hum. That’s not the…
 A1104,"Oui, oui, on reprend !","Yes, yes, here we go again!"
 A1105,[wave amp=20.0 freq=4.0 connected=1]Je te promets de t’aimer dans le bonheur…[/wave],[wave amp=20.0 freq=4.0 connected=1]I promise to love you in joy and…[/wave]
@@ -169,7 +169,7 @@ ACTE12,,
 A1200,Déjà le happy end ?,Already the happy ending?
 A1201,"Bah, tu vois, tout c’est bien passé ! Même Gabriel s’est bien tenu !","There you go, everything went well! Even Gabriel behaved himself!"
 A1202,"Regarde, tu t’inquiétais pour rien. [p]Même Dieu à l’air tout heu…[/p]","Look, you were worried for nothing. [p]Even God looks hap...[/p]"
-A1203,"Mais, mais, qu’est-ce qu’ils font ?","But, but, what are they doing?"
+A1203,"Mais, mais, qu’est-ce qu’ils font ces deux là ?","But, but, these two, what are they doing?"
 C1200,"Dieu ! [i]Maman[/i] ! Madame, euh, Lorena ! [p]Qu’est-ce que vous… ![/p]","God! [i]Mum[/i]! Madam, er, Lorena! What are you...!"
 C1201,Dieu ! [i]Papa[/i] ! Monsieur Mamani ! [p]Qu’est-ce que vous… ![/p],God! [i]Dad[/i]! Mister Mamani! What are you...!
 ACTES13_ET_23,,
@@ -177,16 +177,16 @@ A1300,Il y a trente ans.,Thirty years ago.
 A1301,"Dieu, c’est pas un nom, ça. Pourquoi tu te fais appeler Dieu ?","God, that's not a name. Why do you call yourself God?"
 A1302,"Si, si, c’est comme ça que tout le monde m’appelait quand j’étais petit. « Dieu qu’il est sale ! », « Dieu qu’il est bête ! », « Dieu qu’il est méchant ! ».","Indeed it is, that's what everyone called me when I was little. ‘God he's dirty’, ‘God he's an idiot’, ‘God he's mean’."
 A1303,"Dieu, c’est bien mon nom.","God, that's my name."
-A1304,"Dieu, que je l’aime cet homme devant moi !",God I love that man in front of me!
+A1304,"Dieu, que je l’aime cet homme devant moi !","God, I love that man in front of me!"
 ACTES14_ET_24,,
 A1400,"C’est pas grand-chose, mais j’ai enfin un diplôme !","It's no big deal, but I've finally qualified!"
 A1401,Mon petit jardinier. Tu peux être fier de toi !,My sweet gardener. You can be proud of yourself!
 A1402,Ça va rassurer mes parents.,This will ease the worries of my parents.
 A1403,"Et surtout, ça me touche que tu aies fait tous ces efforts pour moi.","And above all, I'm touched that you've made such efforts just for me."
-A1404,"C’est que je t’aime, alors, c’était pas des efforts. Enfin, c’était pas si difficile.","It's just that I love you, so it wasn't any effort. I mean, it wasn't that difficult."
+A1404,"C’est que j’t’aime, alors, c’était pas des efforts. Enfin, c’était pas si difficile.","It's just that I love you, so it wasn't any effort. I mean, it wasn't that difficult."
 ACTES15_ET_25,,
-A1500,"Dieu, voyons, tu sais que je t’aime !","God, come on, you know I love you!"
-A1501,"Visiblement, moins qu’l’argent et qu’l’honneur de ta fami… !","Obviously, less than money and the [i]honour[/i] of the fami...!"
+A1500,"Dieu, voyons, tu sais combien je t’aime !","God, come on, you know how dearly I love you!"
+A1501,"Visiblement, moins qu’l’argent et qu’l’honneur de la fami… !","Obviously, less than money and the [i]honour[/i] of the fami...!"
 A1502,Comment oses-tu !? Je ne comprends pas pourquoi tu réagis comme ça ! Tu comprends bien que ce n’est que pour les apparences ?,How dare you!? I don't understand why you're being so dramatic! Don't you understand that it's just for the sake of appearances?
 A1503,"Nous pourrons vivre ensemble, heureux. L’autre me la promis !","We will be able to live together, happily. The other promised!"
 A1504,"Et quoi, Dieu sera le gentil jardinier au fond sur les photos de famille, pour toujours au fond sur les photos ?","And so what, God will be the gentle gardener in the background of the family pictures, forever in the background of the pictures?"
@@ -198,8 +198,8 @@ A1602,"Ne t’excuse pas. Moi aussi, je… Dieu et sa fierté mal placée. En vr
 A1603,Dieu !,God!
 A1604,[wave amp=20.0 freq=4.0 connected=1]Il n’y a jamais eu personne d’autre que toi.[/wave],[wave amp=20.0 freq=4.0 connected=1]There's never been anyone but you.[/wave]
 A1605,"[/b]Certains raconteront qu’ils assistèrent à un comportement peu approprié en public, d’autres, qu’il était vraiment temps.[b]","[/b]Some will tell that they witnessed inappropriate public behaviour, others that it really was about time.[b]"
-A1606,"Dîtes, vous deux, maintenant que l’avenir de la famille Mamani est assurée, nous pourrions peut-être envisager de…","Listen, you two, now that the future of the Mamani family is secured, perhaps we could consider…"
-A1607,"[i]Oh[/i] ! Dîtes vous trois ! On ne vous dérange pas, là ?",[i]Oh[/i]! The three of you! Mind if I interrupt?
+A1606,"Dîtes, vous deux, maintenant que l’avenir de la famille Mamani est assuré, nous pourrions peut-être envisager de…","Listen, you two, now that the future of the Mamani family is secured, perhaps we could consider…"
+A1607,"[i]Oh[/i] ! Vous trois ! On ne vous dérange pas, là ?",[i]Oh[/i]! The three of you! Mind if I interrupt?
 A1608,"On supporte vos histoires depuis qu’on est gosses. Juste pour aujourd’hui, on pourrait se concentrer sur [i]notre[/i] histoire d’amour à nous ?!","We've endured your stories since we were kids. Just for today, could we focus on [i]our[/i] own love story?"
 A1609,Tiens ! Elle me plait ta p’tite Mariposa !,There she is! I like your little Mariposa!
 C1600,"N’est-ce pas ? Elle est, merveilleuse !",Who don’t? Isn't she wonderful?
@@ -210,7 +210,7 @@ ACTE17,,
 A1700,"Au fait, Maman te racontait quoi quand nous sommes arrivés ?","By the way, what was Mum telling you when we arrived?"
 C1700,Que nous devrions monter à la capitale [p]et organiser un braquage ![/p],That we should head up to the Capital [p]and stage a heist![/p]
 A1701,"Hein ? Qu’est-ce que tu racontes ? Je ne suis pas sûr de comprendre la métaphore. Parce que, c’est bien une métaphore ?","What? What are you on about? I'm not sure I understand the metaphor. Because, it’s a metaphor, isn't it?"
-C1701,"On a carte blanche, et elle aimerait [p]vraiment qu’on l’utilise à fond, [p]cette carte ![/p][/p]","We've got carte blanche, [p]and she'd really like us[p] to make the most of it![/p][/p]"
+C1701,"On a carte blanche, et elle aimerait [p]vraiment qu’on l’utilise à fond,[/p][p]cette carte ![/p]","We've got carte blanche, [p]and she'd really like us[/p][p]to make the most of it![/p]"
 A1702,"C’est évident, non ?",Isn't that obvious?
 A1703,"(Hi, hi, hi.)","(Hi, hi, hi.)"
 ACTE18,,
@@ -231,15 +231,15 @@ ACTE20,,
 A2000,Pas de points d’amour ? Je refuse de croire que vous soyez aussi cynique. Je ne vous donne pas de fin. Na !,"No love points? I can't believe you're being so cynical. I'm not giving you an ending, so there!"
 ACTE21,,
 A2100,"Ce jeu a été développé en 9 jours pour la jam [url=https://itch.io/jam/velox-fabula-2]Velox Fabula 2[/url] par Seb46. Le code est sous licence MIT, l’histoire est sous licence CC BY 4.0.","This game was developed in 9 days for the [url=https://itch.io/jam/velox-fabula-2]Velox Fabula 2[/url] jam by Seb46. The code is licensed under the MIT licencs, the story is licensed under the CC BY 4.0 licence."
-A2101,"Les illustrations sont réalisées sous Gimp à partir de photos disponibles sur Wikimedia sous licences CC autorisant les modifications.[p]Décors : [url=https://fr.m.wikipedia.org/wiki/Fichier:Fa%C3%A7ade_de_l%27%C3%A9glise_Saint-Antoine,_Livet-et-Gavet,_France.jpg]Façade d’église[/url], [url=https://commons.wikimedia.org/wiki/File:Wedding_aisle_in_old_church_%28Unsplash%29.jpg]Allée d’église[/url], [url=https://commons.wikimedia.org/wiki/File:Gargilesse-Dampierre_%28Indre%29_%2823495781610%29.jpg]Plafond d’église[/url], [url=https://fr.m.wikipedia.org/wiki/Fichier:Cerro_de_San_Crist%C3%B3bal,_Lima,_Per%C3%BA,_2015-07-28,_DD_117.JPG]Quartier montagneux[/url], [url=https://commons.wikimedia.org/wiki/File:Fuerteventura_Beach_Bar.JPG]Bar de Plage[/url], [url=https://commons.wikimedia.org/wiki/File:Bz_convertible_canap%C3%A9-lit.jpg]Canapé[/url], [url=https://commons.wikimedia.org/wiki/File:Louis_Vuitton_VIP_room_in_Vienna.JPG]Salon VIP[/url], [url=https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Malmaison_-_Salle_de_billard_001.jpg]Salle de Billard[/url][/p]
-[p]Par ordre d’apparition : [url=https://commons.wikimedia.org/wiki/File:Anthony_Hopkins-Tuscan_Sun_Festival.jpg]Dieu[/url], [url=https://commons.wikimedia.org/wiki/File:Halle_Berry_11_AA.jpg]Toi[/url], [url=https://commons.wikimedia.org/wiki/File:ShahRukh_K_with_son.jpg]Gabriel[/url], [url=https://commons.wikimedia.org/wiki/File:Emmanuelle_B%C3%A9art-5709.jpg]Mariposa[/url], [url=https://commons.wikimedia.org/wiki/File:Jean_Reno_2010.JPG]Prêtre[/url], [url=https://commons.wikimedia.org/wiki/File:Catherine_Zeta-Jones_in_2010.jpg]Lorena[/url], [url=https://commons.wikimedia.org/wiki/File:Ghost_In_The_Shell_World_Premiere_Red_Carpet-_Kitano_Takeshi,_Scarlett_Johansson_%26_Juliette_Binoche_%2837405452591%29.jpg]Manuel[/url][/p]","The illustrations were created using Gimp from photos available on Wikimedia under CC licences allowing modifications.
-[p]Settings : [url=https://fr.m.wikipedia.org/wiki/Fichier:Fa%C3%A7ade_de_l%27%C3%A9glise_Saint-Antoine,_Livet-et-Gavet,_France.jpg]Church facade[/url], [url=https://commons.wikimedia.org/wiki/File:Wedding_aisle_in_old_church_%28Unsplash%29.jpg]Church aisle[/url], [url=https://commons.wikimedia.org/wiki/File:Gargilesse-Dampierre_%28Indre%29_%2823495781610%29.jpg]Church ceiling[/url], [url=https://fr.m.wikipedia.org/wiki/Fichier:Cerro_de_San_Crist%C3%B3bal,_Lima,_Per%C3%BA,_2015-07-28,_DD_117.JPG]Mountainous district[/url], [url=https://commons.wikimedia.org/wiki/File:Fuerteventura_Beach_Bar.JPG]Beach bar[/url], [url=https://commons.wikimedia.org/wiki/File:Bz_convertible_canap%C3%A9-lit.jpg]Sofa[/url], [url=https://commons.wikimedia.org/wiki/File:Louis_Vuitton_VIP_room_in_Vienna.JPG]VIP lounge[/url], [url=https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Malmaison_-_Salle_de_billard_001.jpg]Billiard room[/url][/p]
-[p]In order of appearance: [url=https://commons.wikimedia.org/wiki/File:Anthony_Hopkins-Tuscan_Sun_Festival.jpg]God[/url], [url=https://commons.wikimedia.org/wiki/File:Halle_Berry_11_AA.jpg]You[/url], [url=https://commons.wikimedia.org/wiki/File:ShahRukh_K_with_son.jpg]Gabriel[/url], [url=https://commons.wikimedia.org/wiki/File:Emmanuelle_B%C3%A9art-5709.jpg]Mariposa[/url], [url=https://commons.wikimedia.org/wiki/File:Jean_Reno_2010.JPG]Priest[/url], [url=https://commons.wikimedia.org/wiki/File:Catherine_Zeta-Jones_in_2010.jpg]Lorena[/url], [url=https://commons.wikimedia.org/wiki/File:Ghost_In_The_Shell_World_Premiere_Red_Carpet-_Kitano_Takeshi,_Scarlett_Johansson_%26_Juliette_Binoche_%2837405452591%29.jpg]Manuel[/url][/p]"
-A2102,"Confidências est interprétée par [url=https://musopen.org/music/43567-confidencias/]Bert Alink[/url]. (CC BY 3.0)
+A2101,Les illustrations sont réalisées sous Gimp à partir de photos disponibles sur Wikimedia sous licences CC autorisant les modifications.,The illustrations were created using Gimp from photos available on Wikimedia under CC licences allowing modifications.
+A2102,"Décors : [url=https://fr.m.wikipedia.org/wiki/Fichier:Fa%C3%A7ade_de_l%27%C3%A9glise_Saint-Antoine,_Livet-et-Gavet,_France.jpg]Façade d’église[/url], [url=https://commons.wikimedia.org/wiki/File:Wedding_aisle_in_old_church_%28Unsplash%29.jpg]Allée d’église[/url], [url=https://commons.wikimedia.org/wiki/File:Gargilesse-Dampierre_%28Indre%29_%2823495781610%29.jpg]Plafond d’église[/url], [url=https://fr.m.wikipedia.org/wiki/Fichier:Cerro_de_San_Crist%C3%B3bal,_Lima,_Per%C3%BA,_2015-07-28,_DD_117.JPG]Quartier montagneux[/url], [url=https://commons.wikimedia.org/wiki/File:Fuerteventura_Beach_Bar.JPG]Bar de Plage[/url], [url=https://commons.wikimedia.org/wiki/File:Bz_convertible_canap%C3%A9-lit.jpg]Canapé[/url], [url=https://commons.wikimedia.org/wiki/File:Louis_Vuitton_VIP_room_in_Vienna.JPG]Salon VIP[/url], [url=https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Malmaison_-_Salle_de_billard_001.jpg]Salle de Billard[/url]
+","Settings : [url=https://fr.m.wikipedia.org/wiki/Fichier:Fa%C3%A7ade_de_l%27%C3%A9glise_Saint-Antoine,_Livet-et-Gavet,_France.jpg]Church facade[/url], [url=https://commons.wikimedia.org/wiki/File:Wedding_aisle_in_old_church_%28Unsplash%29.jpg]Church aisle[/url], [url=https://commons.wikimedia.org/wiki/File:Gargilesse-Dampierre_%28Indre%29_%2823495781610%29.jpg]Church ceiling[/url], [url=https://fr.m.wikipedia.org/wiki/Fichier:Cerro_de_San_Crist%C3%B3bal,_Lima,_Per%C3%BA,_2015-07-28,_DD_117.JPG]Mountainous district[/url], [url=https://commons.wikimedia.org/wiki/File:Fuerteventura_Beach_Bar.JPG]Beach bar[/url], [url=https://commons.wikimedia.org/wiki/File:Bz_convertible_canap%C3%A9-lit.jpg]Sofa[/url], [url=https://commons.wikimedia.org/wiki/File:Louis_Vuitton_VIP_room_in_Vienna.JPG]VIP lounge[/url], [url=https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Malmaison_-_Salle_de_billard_001.jpg]Billiard room[/url]"
+A2103,"Par ordre d’apparition : [url=https://commons.wikimedia.org/wiki/File:Anthony_Hopkins-Tuscan_Sun_Festival.jpg]Dieu[/url], [url=https://commons.wikimedia.org/wiki/File:Halle_Berry_11_AA.jpg]Toi[/url], [url=https://commons.wikimedia.org/wiki/File:ShahRukh_K_with_son.jpg]Gabriel[/url], [url=https://commons.wikimedia.org/wiki/File:Emmanuelle_B%C3%A9art-5709.jpg]Mariposa[/url], [url=https://commons.wikimedia.org/wiki/File:Jean_Reno_2010.JPG]Prêtre[/url], [url=https://commons.wikimedia.org/wiki/File:Catherine_Zeta-Jones_in_2010.jpg]Lorena[/url], [url=https://commons.wikimedia.org/wiki/File:Ghost_In_The_Shell_World_Premiere_Red_Carpet-_Kitano_Takeshi,_Scarlett_Johansson_%26_Juliette_Binoche_%2837405452591%29.jpg]Manuel[/url]",
+A2104,"Confidências est interprétée par [url=https://musopen.org/music/43567-confidencias/]Bert Alink[/url]. (CC BY 3.0)
 Les bruitages sont dérivés de sons de la sonothèque de [url=https://lasonotheque.org/apropos.html]Joseph Sardin[/url]. (CC0)","Confidências is performed by [url=https://musopen.org/music/43567-confidencias/]Bert Alink[/url]. (CC BY 3.0)
 The sound effects are derived from sounds in [url=https://lasonotheque.org/apropos.html]Joseph Sardin[/url]'s Sonothèque. (CC0)"
-ACTE22,,
+ACTE22,,"In order of appearance: [url=https://commons.wikimedia.org/wiki/File:Anthony_Hopkins-Tuscan_Sun_Festival.jpg]God[/url], [url=https://commons.wikimedia.org/wiki/File:Halle_Berry_11_AA.jpg]You[/url], [url=https://commons.wikimedia.org/wiki/File:ShahRukh_K_with_son.jpg]Gabriel[/url], [url=https://commons.wikimedia.org/wiki/File:Emmanuelle_B%C3%A9art-5709.jpg]Mariposa[/url], [url=https://commons.wikimedia.org/wiki/File:Jean_Reno_2010.JPG]Priest[/url], [url=https://commons.wikimedia.org/wiki/File:Catherine_Zeta-Jones_in_2010.jpg]Lorena[/url], [url=https://commons.wikimedia.org/wiki/File:Ghost_In_The_Shell_World_Premiere_Red_Carpet-_Kitano_Takeshi,_Scarlett_Johansson_%26_Juliette_Binoche_%2837405452591%29.jpg]Manuel[/url]"
 A2200,"Hum. Puisqu’ils vont, hum, hum, convoler, est-ce que vous… ?","Hum. Since they're going to, hum, hum, be engaged, do you...?"
 A2201,N’y pensez même pas.,Don't you dare think about it.
 A2202,Fin.,The end.
-A2203,"Non, début ! J’espère que ce n’est que le début d’une sacrément belle histoire pour tous nos amoureux","No, the beginning! I hope this is just the beginning of a fantastic story for all our sweethearts!"
+A2203,"Non, début ! J’espère que ce n’est que le début d’une sacrément belle histoire pour tous nos amoureux !","No, the beginning! I hope this is just the beginning of a fantastic story for all our sweethearts!"

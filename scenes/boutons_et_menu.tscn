@@ -1,9 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://buslnlgx0qoj7"]
+[gd_scene load_steps=23 format=3 uid="uid://buslnlgx0qoj7"]
 
 [ext_resource type="Texture2D" uid="uid://b14iljqxsf4ij" path="res://images_ui/bouton_de_choix.png" id="1_a47cj"]
 [ext_resource type="Theme" uid="uid://bywfpsmb67vem" path="res://scenes/theme_fonts.tres" id="1_t0fcy"]
 [ext_resource type="Script" path="res://scenes/boutons_et_menu.gd" id="1_wk8ed"]
-[ext_resource type="FontFile" uid="uid://cxtp1300b1gqb" path="res://fonts/OpenSans-Regular.ttf" id="2_cnleb"]
 [ext_resource type="Script" path="res://scenes/Bouton.gd" id="4_xxnij"]
 [ext_resource type="Texture2D" uid="uid://dwvrcgj2rtmbe" path="res://images_personnages/toi2_petit.png" id="4_yaxi3"]
 [ext_resource type="Texture2D" uid="uid://brc1wwp6uf1n5" path="res://images_ui/ville.png" id="7_r5lj1"]
@@ -17,7 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://r16jv2rv5dw5" path="res://images_personnages/mariposa_et_toi2_petit_amour.png" id="14_w4l4v"]
 [ext_resource type="Texture2D" uid="uid://8lcgy5g4n0m" path="res://images_personnages/point_noir.png" id="15_38kck"]
 [ext_resource type="Texture2D" uid="uid://cf71r6hbpovpu" path="res://images_ui/reglages.png" id="16_ajlha"]
-[ext_resource type="Texture2D" uid="uid://dbkm6c3f7m3gp" path="res://images_ui/reglages_noir.png" id="18_6otn2"]
+[ext_resource type="Script" path="res://scenes/TexteRecap.gd" id="17_bmlnw"]
+[ext_resource type="Texture2D" uid="uid://dlwdtavpyoqj5" path="res://images_ui/jouer.png" id="18_mhno0"]
+[ext_resource type="Texture2D" uid="uid://cl34ja7cqg4e7" path="res://images_ui/recap.png" id="19_qnonh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqpw1"]
 texture = ExtResource("1_a47cj")
@@ -30,13 +31,6 @@ texture_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_swp5e"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_puutu"]
-texture = ExtResource("16_ajlha")
-modulate_color = Color(0.552956, 0.552956, 0.552956, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ainks"]
-texture = ExtResource("18_6otn2")
 
 [node name="BoutonsEtMenu" type="Control"]
 layout_mode = 3
@@ -171,14 +165,12 @@ theme_override_constants/margin_right = 4
 
 [node name="ButtonSuite" type="Button" parent="ContainerSuivant"]
 layout_mode = 2
-focus_neighbor_left = NodePath("../../OuvertureReglages/BoutonReglagesEntree")
-focus_neighbor_top = NodePath("../../OuvertureReglages/BoutonReglagesEntree")
+focus_neighbor_left = NodePath("../../OuvertureReglages/BoutonRecapEntree")
+focus_neighbor_top = NodePath("../../OuvertureReglages/BoutonRecapEntree")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath(".")
-theme_override_fonts/font = ExtResource("2_cnleb")
-theme_override_font_sizes/font_size = 20
 shortcut_feedback = false
-text = ">"
+icon = ExtResource("18_mhno0")
 script = ExtResource("4_xxnij")
 
 [node name="TournerLaPage" type="AudioStreamPlayer" parent="."]
@@ -415,6 +407,26 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
+[node name="FondRecap" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.745098, 0.560784, 0.407843, 0.784314)
+
+[node name="TexteRecap" type="RichTextLabel" parent="FondRecap"]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 610.0
+offset_bottom = 270.0
+auto_translate = false
+localize_numeral_system = false
+focus_mode = 2
+script = ExtResource("17_bmlnw")
+
 [node name="OuvertureReglages" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 10.0
@@ -427,13 +439,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath(".")
 focus_neighbor_right = NodePath("../../ContainerSuivant/ButtonSuite")
-focus_neighbor_bottom = NodePath("../../ContainerSuivant/ButtonSuite")
-theme_override_styles/normal = SubResource("StyleBoxTexture_puutu")
+focus_neighbor_bottom = NodePath("../BoutonRecapEntree")
+icon = ExtResource("16_ajlha")
 script = ExtResource("4_xxnij")
 
 [node name="BoutonReglageSortie" type="Button" parent="OuvertureReglages"]
@@ -441,13 +455,39 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath(".")
 focus_neighbor_right = NodePath("../../Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer/CheckLangue")
 focus_neighbor_bottom = NodePath("../../Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer/CheckLangue")
-theme_override_styles/normal = SubResource("StyleBoxTexture_ainks")
+icon = ExtResource("18_mhno0")
+script = ExtResource("4_xxnij")
+
+[node name="BoutonRecapEntree" type="Button" parent="OuvertureReglages"]
+layout_mode = 0
+offset_top = 30.0
+offset_right = 26.0
+offset_bottom = 58.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../BoutonReglagesEntree")
+focus_neighbor_right = NodePath("../../ContainerSuivant/ButtonSuite")
+focus_neighbor_bottom = NodePath("../../ContainerSuivant/ButtonSuite")
+icon = ExtResource("19_qnonh")
+script = ExtResource("4_xxnij")
+
+[node name="BoutonRecapSortie" type="Button" parent="OuvertureReglages"]
+layout_mode = 0
+offset_top = 30.0
+offset_right = 26.0
+offset_bottom = 58.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+icon = ExtResource("18_mhno0")
 script = ExtResource("4_xxnij")
 
 [connection signal="mouse_entered" from="ContainerChoix/ListeBoutons/Label0/Button0" to="ContainerChoix/ListeBoutons/Label0/Button0" method="_on_mouse_entered"]
@@ -470,3 +510,7 @@ script = ExtResource("4_xxnij")
 [connection signal="pressed" from="OuvertureReglages/BoutonReglagesEntree" to="." method="_on_bouton_reglages_entree_pressed"]
 [connection signal="mouse_entered" from="OuvertureReglages/BoutonReglageSortie" to="OuvertureReglages/BoutonReglageSortie" method="_on_mouse_entered"]
 [connection signal="pressed" from="OuvertureReglages/BoutonReglageSortie" to="." method="_on_bouton_reglage_sortie_pressed"]
+[connection signal="mouse_entered" from="OuvertureReglages/BoutonRecapEntree" to="OuvertureReglages/BoutonRecapEntree" method="_on_mouse_entered"]
+[connection signal="pressed" from="OuvertureReglages/BoutonRecapEntree" to="." method="_on_bouton_recap_entree_pressed"]
+[connection signal="mouse_entered" from="OuvertureReglages/BoutonRecapSortie" to="OuvertureReglages/BoutonRecapSortie" method="_on_mouse_entered"]
+[connection signal="pressed" from="OuvertureReglages/BoutonRecapSortie" to="." method="_on_bouton_recap_sortie_pressed"]

@@ -38,11 +38,9 @@ func variables_init():
 # Quelles fins sont débloquées? Permet à BarreEtBoutons d'afficher les bonnes.
 var fins: Array[bool] = [false, false, false, false, false, false]
 
+# Les réglages du jeu (sauf la langue)
 const LENT: float = 40
 const RAPIDE: float = 120			
 var vitesse_de_lecture: float = LENT
-
 var musique_en_pause: bool = false
 var effets_sonores: bool = true
-
-

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Acte" load_steps=15 format=3 uid="uid://22q01na5nub2"]
+[gd_resource type="Resource" script_class="Acte" load_steps=19 format=3 uid="uid://22q01na5nub2"]
 
 [ext_resource type="AudioStream" uid="uid://dgurk32gw3nyr" path="res://audio/silence.mp3" id="1_2wolw"]
 [ext_resource type="Script" path="res://ressources_dialogues/acte.gd" id="1_jwfdt"]
@@ -38,6 +38,36 @@ code_personnage = "DEV"
 emotion = "RIEN"
 choix = Array[ExtResource("2_t8sn5")]([SubResource("Resource_3iy64")])
 
+[sub_resource type="Resource" id="Resource_1lh7l"]
+script = ExtResource("2_t8sn5")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 3
+
+[sub_resource type="Resource" id="Resource_a0lss"]
+script = ExtResource("3_tk5xa")
+code_traduction = "A2102"
+code_personnage = "DEV"
+emotion = "RIEN"
+choix = Array[ExtResource("2_t8sn5")]([SubResource("Resource_1lh7l")])
+
+[sub_resource type="Resource" id="Resource_h6mjg"]
+script = ExtResource("2_t8sn5")
+code_traduction = "SUIVANT"
+point_d_amour = 0
+genre_toi = ""
+interet_dieu = ""
+ligne = 4
+
+[sub_resource type="Resource" id="Resource_yce6q"]
+script = ExtResource("3_tk5xa")
+code_traduction = "A2103"
+code_personnage = "DEV"
+emotion = "RIEN"
+choix = Array[ExtResource("2_t8sn5")]([SubResource("Resource_h6mjg")])
+
 [sub_resource type="Resource" id="Resource_k6fm2"]
 script = ExtResource("2_t8sn5")
 code_traduction = "SUIVANT"
@@ -48,14 +78,14 @@ ligne = -22
 
 [sub_resource type="Resource" id="Resource_jbu05"]
 script = ExtResource("3_tk5xa")
-code_traduction = "A2102"
+code_traduction = "A2104"
 code_personnage = "DEV"
 emotion = "RIEN"
 choix = Array[ExtResource("2_t8sn5")]([SubResource("Resource_k6fm2")])
 
 [sub_resource type="Resource" id="Resource_swtac"]
 script = ExtResource("4_abfac")
-dialogue = Array[ExtResource("3_tk5xa")]([SubResource("Resource_ojnw5"), SubResource("Resource_k1sv6"), SubResource("Resource_jbu05")])
+dialogue = Array[ExtResource("3_tk5xa")]([SubResource("Resource_ojnw5"), SubResource("Resource_k1sv6"), SubResource("Resource_a0lss"), SubResource("Resource_yce6q"), SubResource("Resource_jbu05")])
 
 [resource]
 script = ExtResource("1_jwfdt")
@@ -64,3 +94,4 @@ fond = ExtResource("5_surg7")
 ligne_de_depart = 0
 dialogue = SubResource("Resource_swtac")
 bruitage = ExtResource("1_2wolw")
+duree_transition = 1.0

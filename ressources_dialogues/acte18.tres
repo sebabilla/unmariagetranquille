@@ -11,7 +11,7 @@
 [sub_resource type="Resource" id="Resource_yonii"]
 script = ExtResource("2_j6agg")
 code_traduction = "C1800"
-point_d_amour = 0
+point_d_amour = 1
 genre_toi = ""
 interet_dieu = ""
 ligne = 1
@@ -26,7 +26,7 @@ choix = Array[ExtResource("2_j6agg")]([SubResource("Resource_yonii")])
 [sub_resource type="Resource" id="Resource_jncx1"]
 script = ExtResource("2_j6agg")
 code_traduction = "C1801"
-point_d_amour = 0
+point_d_amour = 1
 genre_toi = ""
 interet_dieu = ""
 ligne = 2
@@ -79,3 +79,4 @@ fond = ExtResource("5_8cd41")
 ligne_de_depart = 0
 dialogue = SubResource("Resource_ekxxu")
 bruitage = ExtResource("1_g2uyh")
+duree_transition = 1.0

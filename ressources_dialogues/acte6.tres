@@ -246,3 +246,4 @@ fond = ExtResource("5_7b3l5")
 ligne_de_depart = 0
 dialogue = SubResource("Resource_fxdbd")
 bruitage = ExtResource("1_4v8e7")
+duree_transition = 2.0

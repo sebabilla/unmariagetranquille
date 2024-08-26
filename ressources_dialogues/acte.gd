@@ -5,3 +5,4 @@ class_name Acte extends Resource
 @export var ligne_de_depart: int = 0
 @export var dialogue: Dialogue
 @export var bruitage: AudioStream
+@export var duree_transition: float = 1

@@ -109,3 +109,4 @@ fond = ExtResource("5_nalon")
 ligne_de_depart = 0
 dialogue = SubResource("Resource_mt410")
 bruitage = ExtResource("1_jiwc4")
+duree_transition = 2.0

@@ -26,7 +26,7 @@ choix = Array[ExtResource("2_bk5fh")]([SubResource("Resource_jleo1")])
 [sub_resource type="Resource" id="Resource_q735v"]
 script = ExtResource("2_bk5fh")
 code_traduction = "C1901"
-point_d_amour = 0
+point_d_amour = -1
 genre_toi = ""
 interet_dieu = ""
 ligne = 2
@@ -79,3 +79,4 @@ fond = ExtResource("5_rnfjv")
 ligne_de_depart = 0
 dialogue = SubResource("Resource_gdshg")
 bruitage = ExtResource("1_u3gb4")
+duree_transition = 1.0
