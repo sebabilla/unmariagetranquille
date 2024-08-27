@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://buslnlgx0qoj7"]
+[gd_scene load_steps=27 format=3 uid="uid://buslnlgx0qoj7"]
 
 [ext_resource type="Texture2D" uid="uid://b14iljqxsf4ij" path="res://images_ui/bouton_de_choix.png" id="1_a47cj"]
 [ext_resource type="Theme" uid="uid://bywfpsmb67vem" path="res://scenes/theme_fonts.tres" id="1_t0fcy"]
@@ -31,6 +31,18 @@ texture_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_swp5e"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="InputEventAction" id="InputEventAction_48f7l"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_hn7xd"]
+events = [SubResource("InputEventAction_48f7l")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_y6mtf"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_jk0y4"]
+events = [SubResource("InputEventAction_y6mtf")]
 
 [node name="BoutonsEtMenu" type="Control"]
 layout_mode = 3
@@ -418,11 +430,11 @@ grow_vertical = 2
 color = Color(0.745098, 0.560784, 0.407843, 0.784314)
 
 [node name="TexteRecap" type="RichTextLabel" parent="FondRecap"]
+auto_translate_mode = 2
 layout_mode = 0
 offset_left = 50.0
 offset_right = 610.0
 offset_bottom = 270.0
-auto_translate = false
 localize_numeral_system = false
 focus_mode = 2
 script = ExtResource("17_bmlnw")
@@ -463,6 +475,7 @@ focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath(".")
 focus_neighbor_right = NodePath("../../Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer/CheckLangue")
 focus_neighbor_bottom = NodePath("../../Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer/CheckLangue")
+shortcut = SubResource("Shortcut_hn7xd")
 icon = ExtResource("18_mhno0")
 script = ExtResource("4_xxnij")
 
@@ -487,6 +500,7 @@ focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath(".")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath(".")
+shortcut = SubResource("Shortcut_jk0y4")
 icon = ExtResource("18_mhno0")
 script = ExtResource("4_xxnij")
 

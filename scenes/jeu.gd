@@ -124,11 +124,6 @@ func lire_dialogue(numero_ligne: int) -> void:
 func _on_boutons_et_menu_replique_suivante(numero_ligne: int) -> void:
 	lire_dialogue(numero_ligne)
 
-# Pour décaler l'affichage du dialogue géré par Personnage, et l'affichage du
-# bouton suivant géré par Boutons_choix
-func _on_personnage_ligne_de_dialogue_affichee() -> void:
-	$BoutonsEtMenu.activer_suite()
-
 # Workaround pour actualiser la langue dès la ligne actuelle au lieu d'attendre
 # une nouvelle ligne de texte
 func _on_boutons_et_menu_langue_changee() -> void:
@@ -139,4 +134,3 @@ func _on_boutons_et_menu_musique_changee() -> void:
 	Globals.musique_en_pause = not Globals.musique_en_pause
 	$Confidencias.stream_paused = Globals.musique_en_pause
 	$BoutonsEtMenu.actualiser_affichage_reglages()
-

@@ -82,7 +82,7 @@ stream = ExtResource("9_vfoxj")
 volume_db = -6.0
 
 [connection signal="ajouter_au_recap" from="Personnage" to="BoutonsEtMenu" method="mise_a_jour_recap"]
-[connection signal="ligne_de_dialogue_affichee" from="Personnage" to="." method="_on_personnage_ligne_de_dialogue_affichee"]
+[connection signal="ligne_de_dialogue_affichee" from="Personnage" to="BoutonsEtMenu" method="activer_suite"]
 [connection signal="acte_suivant" from="BoutonsEtMenu" to="." method="_on_boutons_et_menu_acte_suivant"]
 [connection signal="langue_changee" from="BoutonsEtMenu" to="." method="_on_boutons_et_menu_langue_changee"]
 [connection signal="musique_changee" from="BoutonsEtMenu" to="." method="_on_boutons_et_menu_musique_changee"]

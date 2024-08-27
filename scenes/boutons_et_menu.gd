@@ -99,6 +99,7 @@ func _on_button_suite_pressed() -> void:
 		return
 	activer_tous_les_boutons()
 
+# appelée par personnage.gd une fois qu'une ligne de dialogue est affichée
 func activer_suite() -> void:
 	$ContainerSuivant/ButtonSuite.show()
 	$ContainerSuivant/ButtonSuite.disabled = false
