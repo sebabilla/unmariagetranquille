@@ -14,9 +14,13 @@ config/name="A peaceful wedding"
 config/name_localized={
 "fr": "Un mariage tranquille"
 }
+config/version="1.1.0"
 run/main_scene="res://scenes/jeu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="res://images_decors/ville.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+config/icon="res://images_ui/icone_jeu.png"
 
 [autoload]
 
@@ -28,6 +32,11 @@ window/size/viewport_width=640
 window/size/viewport_height=360
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
+
+[filesystem]
+
+import/fbx2gltf/enabled=false
+import/blender/enabled=false
 
 [input]
 
@@ -52,4 +61,5 @@ locale/translations=PackedStringArray("res://traductions/traductions.en.translat
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
