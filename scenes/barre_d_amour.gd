@@ -45,5 +45,3 @@ func jouer_chagrin() -> void:
 	await tween.finished
 	$Amour/Coeur.hide()
 	$Amour/Coeur.global_position = position_actuelle
-
-
