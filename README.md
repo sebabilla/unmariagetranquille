@@ -16,7 +16,7 @@ story : CC BY 4.0
 
 #### Credits
 
-* Made with Godot 4.2 and Gimp 2.10
+* Made with Godot 4.2 and updated to 4.6 and Gimp 2.10
 * Backgrounds modified from Wikimedia pictures :
 	* Eglise de Livet-et-Gavet by [Édouard Hue](https://fr.m.wikipedia.org/wiki/Fichier:Fa%C3%A7ade_de_l%27%C3%A9glise_Saint-Antoine,_Livet-et-Gavet,_France.jpg) (CC BY-SA 3.0)
 	* Wedding aisle in old church by [Annie Spratt](https://commons.wikimedia.org/wiki/File:Wedding_aisle_in_old_church_%28Unsplash%29.jpg) (CC0)

@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bvfpdsoa20505"]
+[gd_scene format=3 uid="uid://bvfpdsoa20505"]
 
 [ext_resource type="Theme" uid="uid://bywfpsmb67vem" path="res://scenes/theme_fonts.tres" id="1_ftd0h"]
-[ext_resource type="Script" path="res://scenes/barre_d_amour.gd" id="1_uiuf5"]
+[ext_resource type="Script" uid="uid://in07gkptwwcw" path="res://scenes/barre_d_amour.gd" id="1_uiuf5"]
 [ext_resource type="Texture2D" uid="uid://dj85n4iltlks5" path="res://images_ui/coeur.png" id="2_apufs"]
 [ext_resource type="Texture2D" uid="uid://ohsij5som2se" path="res://images_ui/barre_amour.png" id="3_x8wnx"]
 [ext_resource type="AudioStream" uid="uid://ci3b46yylkuyu" path="res://audio/miaou.mp3" id="4_67oj0"]
@@ -23,15 +23,16 @@ texture_margin_right = 4.0
 texture_margin_bottom = 4.0
 modulate_color = Color(0.913725, 0.329412, 0.392157, 1)
 
-[node name="BarreDAmour" type="Control"]
+[node name="BarreDAmour" type="Control" unique_id=1633445103]
 layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
+mouse_filter = 2
 theme = ExtResource("1_ftd0h")
 script = ExtResource("1_uiuf5")
 
-[node name="Amour" type="ProgressBar" parent="."]
+[node name="Amour" type="ProgressBar" parent="." unique_id=1624549469]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -41,6 +42,7 @@ offset_top = 10.0
 offset_right = -15.0
 offset_bottom = 60.0
 grow_horizontal = 0
+mouse_filter = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_t1wl1")
 theme_override_styles/fill = SubResource("StyleBoxTexture_joajv")
 max_value = 20.0
@@ -48,16 +50,17 @@ value = 10.0
 fill_mode = 3
 show_percentage = false
 
-[node name="Coeur" type="TextureRect" parent="Amour"]
+[node name="Coeur" type="TextureRect" parent="Amour" unique_id=380503717]
 layout_mode = 0
 offset_left = -5.0
 offset_top = 55.0
 offset_right = 15.0
 offset_bottom = 75.0
+mouse_filter = 2
 texture = ExtResource("2_apufs")
 
-[node name="Miaou" type="AudioStreamPlayer" parent="."]
+[node name="Miaou" type="AudioStreamPlayer" parent="." unique_id=1025172199]
 stream = ExtResource("4_67oj0")
 
-[node name="Bouh" type="AudioStreamPlayer" parent="."]
+[node name="Bouh" type="AudioStreamPlayer" parent="." unique_id=283220697]
 stream = ExtResource("5_p3fu3")

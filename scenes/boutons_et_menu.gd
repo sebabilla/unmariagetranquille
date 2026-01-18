@@ -8,6 +8,7 @@ signal musique_changee
 const NOMBRE_DE_CHOIX_MAX = 3
 
 var choix_possibles: Array[Choix] = []
+var cliquer: bool = false
 @onready var noeud_boutons: VBoxContainer = $ContainerChoix/ListeBoutons
 
 
@@ -18,15 +19,23 @@ func _ready() -> void:
 	_on_bouton_reglage_sortie_pressed()
 	_on_bouton_recap_sortie_pressed()
 
-# Utilisé par le scipt de jeu, prépare les boutons, mais n'affiche rien
+# Utilisé par le script de jeu, prépare les boutons, mais n'affiche rien
 func charger_boutons(import_choix: Array[Choix]) -> void:
 	choix_possibles = import_choix
-	for numero in range(import_choix.size()):
+	var taille : int = import_choix.size()
+	for numero in range(taille):
 		var bouton: RichTextLabel = noeud_boutons.get_child(numero)
 		bouton.text = tr(import_choix[numero].code_traduction)
 		bouton.self_modulate = Color("#be8f68")
-		
-		
+
+# Cliquer n'importe où sur l'écran pour avancer quand il n'y a pas de réponse
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept"):
+		if cliquer:
+			cliquer = false
+			_on_button_suite_pressed()
+
+
 func _on_button_0_pressed() -> void:
 	enregistrer_le_choix(0)
 	var ligne: String = $ContainerChoix/ListeBoutons/Label0.text
@@ -105,11 +114,13 @@ func activer_suite() -> void:
 	$ContainerSuivant/ButtonSuite.disabled = false
 	if not $OuvertureReglages/BoutonReglagesEntree.disabled: # workaround à la con pour éviter la perte du focus pendant le chagement de langue 
 		$ContainerSuivant/ButtonSuite.grab_focus()
+		cliquer = true
 
 func inactiver_suite() -> void:
 	$ContainerSuivant/ButtonSuite.hide()
 	$ContainerSuivant/ButtonSuite.disabled = true
 	$ContainerSuivant/ButtonSuite.release_focus()
+	cliquer = false
 
 
 # Ouvre ou masque le menu avec le titre, les fins et les reglages 

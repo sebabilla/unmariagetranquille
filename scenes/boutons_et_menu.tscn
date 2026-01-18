@@ -1,9 +1,9 @@
-[gd_scene load_steps=27 format=3 uid="uid://buslnlgx0qoj7"]
+[gd_scene format=3 uid="uid://buslnlgx0qoj7"]
 
 [ext_resource type="Texture2D" uid="uid://b14iljqxsf4ij" path="res://images_ui/bouton_de_choix.png" id="1_a47cj"]
 [ext_resource type="Theme" uid="uid://bywfpsmb67vem" path="res://scenes/theme_fonts.tres" id="1_t0fcy"]
-[ext_resource type="Script" path="res://scenes/boutons_et_menu.gd" id="1_wk8ed"]
-[ext_resource type="Script" path="res://scenes/Bouton.gd" id="4_xxnij"]
+[ext_resource type="Script" uid="uid://dosqo7u5qpy7g" path="res://scenes/boutons_et_menu.gd" id="1_wk8ed"]
+[ext_resource type="Script" uid="uid://c4dyel5dmtn3g" path="res://scenes/Bouton.gd" id="4_xxnij"]
 [ext_resource type="Texture2D" uid="uid://dwvrcgj2rtmbe" path="res://images_personnages/toi2_petit.png" id="4_yaxi3"]
 [ext_resource type="Texture2D" uid="uid://brc1wwp6uf1n5" path="res://images_ui/ville.png" id="7_r5lj1"]
 [ext_resource type="Texture2D" uid="uid://c227x440rwroj" path="res://images_ui/titre.png" id="8_1o1sj"]
@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://r16jv2rv5dw5" path="res://images_personnages/mariposa_et_toi2_petit_amour.png" id="14_w4l4v"]
 [ext_resource type="Texture2D" uid="uid://8lcgy5g4n0m" path="res://images_personnages/point_noir.png" id="15_38kck"]
 [ext_resource type="Texture2D" uid="uid://cf71r6hbpovpu" path="res://images_ui/reglages.png" id="16_ajlha"]
-[ext_resource type="Script" path="res://scenes/TexteRecap.gd" id="17_bmlnw"]
+[ext_resource type="Script" uid="uid://bma74fd0fpu0e" path="res://scenes/TexteRecap.gd" id="17_bmlnw"]
 [ext_resource type="Texture2D" uid="uid://dlwdtavpyoqj5" path="res://images_ui/jouer.png" id="18_mhno0"]
 [ext_resource type="Texture2D" uid="uid://cl34ja7cqg4e7" path="res://images_ui/recap.png" id="19_qnonh"]
 
@@ -44,7 +44,7 @@ action = &"ui_cancel"
 [sub_resource type="Shortcut" id="Shortcut_jk0y4"]
 events = [SubResource("InputEventAction_y6mtf")]
 
-[node name="BoutonsEtMenu" type="Control"]
+[node name="BoutonsEtMenu" type="Control" unique_id=1291015593]
 layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
@@ -53,10 +53,11 @@ offset_left = -640.0
 grow_horizontal = 0
 size_flags_horizontal = 8
 size_flags_vertical = 8
+mouse_filter = 2
 theme = ExtResource("1_t0fcy")
 script = ExtResource("1_wk8ed")
 
-[node name="ContainerChoix" type="HBoxContainer" parent="."]
+[node name="ContainerChoix" type="HBoxContainer" parent="." unique_id=953138891]
 layout_direction = 2
 layout_mode = 1
 anchors_preset = 3
@@ -69,12 +70,13 @@ offset_top = -35.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="ListeBoutons" type="VBoxContainer" parent="ContainerChoix"]
+[node name="ListeBoutons" type="VBoxContainer" parent="ContainerChoix" unique_id=1662446381]
 layout_direction = 3
 layout_mode = 2
 size_flags_vertical = 8
+mouse_filter = 2
 
-[node name="Label0" type="RichTextLabel" parent="ContainerChoix/ListeBoutons"]
+[node name="Label0" type="RichTextLabel" parent="ContainerChoix/ListeBoutons" unique_id=335038627]
 clip_contents = false
 layout_mode = 2
 size_flags_vertical = 0
@@ -85,7 +87,7 @@ scroll_active = false
 autowrap_mode = 0
 visible_characters_behavior = 1
 
-[node name="Button0" type="Button" parent="ContainerChoix/ListeBoutons/Label0"]
+[node name="Button0" type="Button" parent="ContainerChoix/ListeBoutons/Label0" unique_id=702746630]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -99,7 +101,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ngfji")
 script = ExtResource("4_xxnij")
 
-[node name="Label1" type="RichTextLabel" parent="ContainerChoix/ListeBoutons"]
+[node name="Label1" type="RichTextLabel" parent="ContainerChoix/ListeBoutons" unique_id=1091317306]
 clip_contents = false
 layout_mode = 2
 size_flags_vertical = 0
@@ -110,7 +112,7 @@ scroll_active = false
 autowrap_mode = 0
 visible_characters_behavior = 1
 
-[node name="Button1" type="Button" parent="ContainerChoix/ListeBoutons/Label1"]
+[node name="Button1" type="Button" parent="ContainerChoix/ListeBoutons/Label1" unique_id=1685730929]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -124,7 +126,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_swp5e")
 script = ExtResource("4_xxnij")
 
-[node name="Label2" type="RichTextLabel" parent="ContainerChoix/ListeBoutons"]
+[node name="Label2" type="RichTextLabel" parent="ContainerChoix/ListeBoutons" unique_id=1651994515]
 clip_contents = false
 layout_mode = 2
 size_flags_vertical = 0
@@ -135,7 +137,7 @@ scroll_active = false
 autowrap_mode = 0
 visible_characters_behavior = 1
 
-[node name="Button2" type="Button" parent="ContainerChoix/ListeBoutons/Label2"]
+[node name="Button2" type="Button" parent="ContainerChoix/ListeBoutons/Label2" unique_id=1162829957]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -148,13 +150,13 @@ focus_neighbor_right = NodePath(".")
 theme_override_styles/normal = SubResource("StyleBoxFlat_swp5e")
 script = ExtResource("4_xxnij")
 
-[node name="MarginContainer" type="MarginContainer" parent="ContainerChoix"]
+[node name="MarginContainer" type="MarginContainer" parent="ContainerChoix" unique_id=1284690134]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_constants/margin_left = 2
 theme_override_constants/margin_bottom = 5
 
-[node name="Heros" type="TextureRect" parent="ContainerChoix/MarginContainer"]
+[node name="Heros" type="TextureRect" parent="ContainerChoix/MarginContainer" unique_id=1277440288]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -162,7 +164,7 @@ texture = ExtResource("4_yaxi3")
 stretch_mode = 2
 flip_h = true
 
-[node name="ContainerSuivant" type="MarginContainer" parent="."]
+[node name="ContainerSuivant" type="MarginContainer" parent="." unique_id=527744414]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -175,26 +177,26 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_constants/margin_right = 4
 
-[node name="ButtonSuite" type="Button" parent="ContainerSuivant"]
+[node name="ButtonSuite" type="Button" parent="ContainerSuivant" unique_id=1082440057]
 layout_mode = 2
 focus_neighbor_left = NodePath("../../OuvertureReglages/BoutonRecapEntree")
 focus_neighbor_top = NodePath("../../OuvertureReglages/BoutonRecapEntree")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath(".")
-shortcut_feedback = false
+shortcut_in_tooltip = false
 icon = ExtResource("18_mhno0")
 script = ExtResource("4_xxnij")
 
-[node name="TournerLaPage" type="AudioStreamPlayer" parent="."]
+[node name="TournerLaPage" type="AudioStreamPlayer" parent="." unique_id=147900127]
 stream = ExtResource("8_c7dpg")
 
-[node name="Reglages" type="TextureRect" parent="."]
+[node name="Reglages" type="TextureRect" parent="." unique_id=125823063]
 layout_mode = 0
 offset_left = -640.0
 offset_bottom = 360.0
 texture = ExtResource("7_r5lj1")
 
-[node name="VBoxParent" type="VBoxContainer" parent="Reglages"]
+[node name="VBoxParent" type="VBoxContainer" parent="Reglages" unique_id=1382175269]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -202,45 +204,45 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Reglages/VBoxParent"]
+[node name="MarginContainer" type="MarginContainer" parent="Reglages/VBoxParent" unique_id=2058297263]
 layout_mode = 2
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 18
 
-[node name="Bannière" type="TextureRect" parent="Reglages/VBoxParent/MarginContainer"]
+[node name="Bannière" type="TextureRect" parent="Reglages/VBoxParent/MarginContainer" unique_id=1143662370]
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("8_1o1sj")
 
-[node name="HBoxReglagesFins" type="HBoxContainer" parent="Reglages/VBoxParent"]
+[node name="HBoxReglagesFins" type="HBoxContainer" parent="Reglages/VBoxParent" unique_id=85813110]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="MarginContainerGauche" type="MarginContainer" parent="Reglages/VBoxParent/HBoxReglagesFins"]
+[node name="MarginContainerGauche" type="MarginContainer" parent="Reglages/VBoxParent/HBoxReglagesFins" unique_id=1818707436]
 layout_mode = 2
 theme_override_constants/margin_left = 150
 
-[node name="VBoxFins" type="VBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins"]
+[node name="VBoxFins" type="VBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins" unique_id=1363117430]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins" unique_id=1177229735]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "FINS"
 fit_content = true
 autowrap_mode = 0
 
-[node name="GridFins" type="GridContainer" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins"]
+[node name="GridFins" type="GridContainer" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins" unique_id=2096282715]
 layout_mode = 2
 size_flags_horizontal = 4
 columns = 2
 
-[node name="TextureRect0" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins"]
+[node name="TextureRect0" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins" unique_id=1633499241]
 layout_mode = 2
 texture = ExtResource("9_n5xpi")
 
-[node name="Lorena" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect0"]
+[node name="Lorena" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect0" unique_id=1212120886]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -249,11 +251,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_enw5b")
 
-[node name="TextureRect1" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins"]
+[node name="TextureRect1" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins" unique_id=382778292]
 layout_mode = 2
 texture = ExtResource("9_n5xpi")
 
-[node name="Manuel" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect1"]
+[node name="Manuel" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect1" unique_id=1521587324]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -262,11 +264,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("11_fq5m6")
 
-[node name="TextureRect2" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins"]
+[node name="TextureRect2" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins" unique_id=1676941532]
 layout_mode = 2
 texture = ExtResource("9_n5xpi")
 
-[node name="TropBien" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect2"]
+[node name="TropBien" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect2" unique_id=1638196123]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -275,11 +277,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("12_1njm8")
 
-[node name="TextureRect3" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins"]
+[node name="TextureRect3" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins" unique_id=1840403736]
 layout_mode = 2
 texture = ExtResource("9_n5xpi")
 
-[node name="Toxique" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect3"]
+[node name="Toxique" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect3" unique_id=450926701]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -288,11 +290,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("13_rx6ip")
 
-[node name="TextureRect4" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins"]
+[node name="TextureRect4" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins" unique_id=25299868]
 layout_mode = 2
 texture = ExtResource("9_n5xpi")
 
-[node name="Meilleure" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect4"]
+[node name="Meilleure" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect4" unique_id=1950230488]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -301,11 +303,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("14_w4l4v")
 
-[node name="TextureRect5" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins"]
+[node name="TextureRect5" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins" unique_id=456723367]
 layout_mode = 2
 texture = ExtResource("9_n5xpi")
 
-[node name="Rien" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect5"]
+[node name="Rien" type="TextureRect" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxFins/GridFins/TextureRect5" unique_id=213726869]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -314,20 +316,20 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("15_38kck")
 
-[node name="MarginContainerMilieu" type="MarginContainer" parent="Reglages/VBoxParent/HBoxReglagesFins"]
+[node name="MarginContainerMilieu" type="MarginContainer" parent="Reglages/VBoxParent/HBoxReglagesFins" unique_id=1321466391]
 layout_mode = 2
 theme_override_constants/margin_left = 40
 
-[node name="VBoxReglages" type="VBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins"]
+[node name="VBoxReglages" type="VBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins" unique_id=1362619683]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages" unique_id=25801141]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="CheckLangue" type="CheckButton" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer"]
+[node name="CheckLangue" type="CheckButton" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer" unique_id=1881471783]
 layout_mode = 2
 focus_neighbor_left = NodePath("../../../../../../OuvertureReglages/BoutonReglageSortie")
 focus_neighbor_top = NodePath("../../../../../../OuvertureReglages/BoutonReglageSortie")
@@ -335,7 +337,7 @@ focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../HBoxContainer2/CheckVitesse")
 script = ExtResource("4_xxnij")
 
-[node name="TextLangue" type="RichTextLabel" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer"]
+[node name="TextLangue" type="RichTextLabel" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer" unique_id=1311265229]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "LANGUE"
@@ -343,11 +345,11 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages" unique_id=28337284]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="CheckVitesse" type="CheckButton" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer2"]
+[node name="CheckVitesse" type="CheckButton" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer2" unique_id=720521101]
 layout_mode = 2
 focus_neighbor_left = NodePath("../../../../../../OuvertureReglages/BoutonReglageSortie")
 focus_neighbor_top = NodePath("../../HBoxContainer/CheckLangue")
@@ -355,7 +357,7 @@ focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../HBoxContainer3/CheckMusique")
 script = ExtResource("4_xxnij")
 
-[node name="TextVitesse" type="RichTextLabel" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer2"]
+[node name="TextVitesse" type="RichTextLabel" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer2" unique_id=421126921]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "VITESSE"
@@ -363,19 +365,21 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages" unique_id=1400216412]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="CheckMusique" type="CheckButton" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer3"]
+[node name="CheckMusique" type="CheckButton" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer3" unique_id=1811808961]
 layout_mode = 2
 focus_neighbor_left = NodePath("../../../../../../OuvertureReglages/BoutonReglageSortie")
 focus_neighbor_top = NodePath("../../HBoxContainer2/CheckVitesse")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../HBoxContainer4/CheckSons")
+shortcut_feedback = false
+shortcut_in_tooltip = false
 script = ExtResource("4_xxnij")
 
-[node name="TextMusique" type="RichTextLabel" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer3"]
+[node name="TextMusique" type="RichTextLabel" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer3" unique_id=1461018694]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "MUSIQUE"
@@ -383,19 +387,21 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages" unique_id=890936464]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="CheckSons" type="CheckButton" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer4"]
+[node name="CheckSons" type="CheckButton" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer4" unique_id=1547005442]
 layout_mode = 2
 focus_neighbor_left = NodePath("../../../../../../OuvertureReglages/BoutonReglageSortie")
 focus_neighbor_top = NodePath("../../HBoxContainer3/CheckMusique")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath(".")
+shortcut_feedback = false
+shortcut_in_tooltip = false
 script = ExtResource("4_xxnij")
 
-[node name="TextSons" type="RichTextLabel" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer4"]
+[node name="TextSons" type="RichTextLabel" parent="Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer4" unique_id=2133941842]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "SONS"
@@ -403,12 +409,12 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
-[node name="MarginContainer2" type="MarginContainer" parent="Reglages/VBoxParent"]
+[node name="MarginContainer2" type="MarginContainer" parent="Reglages/VBoxParent" unique_id=1302074637]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_constants/margin_top = 97
 
-[node name="Seb46" type="RichTextLabel" parent="Reglages/VBoxParent/MarginContainer2"]
+[node name="Seb46" type="RichTextLabel" parent="Reglages/VBoxParent/MarginContainer2" unique_id=101000831]
 layout_mode = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 10
@@ -419,7 +425,7 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
-[node name="FondRecap" type="ColorRect" parent="."]
+[node name="FondRecap" type="ColorRect" parent="." unique_id=2007244734]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -427,9 +433,10 @@ anchor_bottom = 1.0
 offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0.745098, 0.560784, 0.407843, 0.784314)
 
-[node name="TexteRecap" type="RichTextLabel" parent="FondRecap"]
+[node name="TexteRecap" type="RichTextLabel" parent="FondRecap" unique_id=391257789]
 auto_translate_mode = 2
 layout_mode = 0
 offset_left = 50.0
@@ -439,14 +446,14 @@ localize_numeral_system = false
 focus_mode = 2
 script = ExtResource("17_bmlnw")
 
-[node name="OuvertureReglages" type="Control" parent="."]
+[node name="OuvertureReglages" type="Control" parent="." unique_id=1964993311]
 anchors_preset = 0
 offset_left = 10.0
 offset_top = 10.0
 offset_right = 28.0
 offset_bottom = 30.0
 
-[node name="BoutonReglagesEntree" type="Button" parent="OuvertureReglages"]
+[node name="BoutonReglagesEntree" type="Button" parent="OuvertureReglages" unique_id=416681025]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -459,10 +466,12 @@ focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath(".")
 focus_neighbor_right = NodePath("../../ContainerSuivant/ButtonSuite")
 focus_neighbor_bottom = NodePath("../BoutonRecapEntree")
+shortcut_feedback = false
+shortcut_in_tooltip = false
 icon = ExtResource("16_ajlha")
 script = ExtResource("4_xxnij")
 
-[node name="BoutonReglageSortie" type="Button" parent="OuvertureReglages"]
+[node name="BoutonReglageSortie" type="Button" parent="OuvertureReglages" unique_id=1168125607]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -476,10 +485,12 @@ focus_neighbor_top = NodePath(".")
 focus_neighbor_right = NodePath("../../Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer/CheckLangue")
 focus_neighbor_bottom = NodePath("../../Reglages/VBoxParent/HBoxReglagesFins/VBoxReglages/HBoxContainer/CheckLangue")
 shortcut = SubResource("Shortcut_hn7xd")
+shortcut_feedback = false
+shortcut_in_tooltip = false
 icon = ExtResource("18_mhno0")
 script = ExtResource("4_xxnij")
 
-[node name="BoutonRecapEntree" type="Button" parent="OuvertureReglages"]
+[node name="BoutonRecapEntree" type="Button" parent="OuvertureReglages" unique_id=2088371181]
 layout_mode = 0
 offset_top = 30.0
 offset_right = 26.0
@@ -488,10 +499,12 @@ focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../BoutonReglagesEntree")
 focus_neighbor_right = NodePath("../../ContainerSuivant/ButtonSuite")
 focus_neighbor_bottom = NodePath("../../ContainerSuivant/ButtonSuite")
+shortcut_feedback = false
+shortcut_in_tooltip = false
 icon = ExtResource("19_qnonh")
 script = ExtResource("4_xxnij")
 
-[node name="BoutonRecapSortie" type="Button" parent="OuvertureReglages"]
+[node name="BoutonRecapSortie" type="Button" parent="OuvertureReglages" unique_id=1898331526]
 layout_mode = 0
 offset_top = 30.0
 offset_right = 26.0
@@ -501,6 +514,8 @@ focus_neighbor_top = NodePath(".")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath(".")
 shortcut = SubResource("Shortcut_jk0y4")
+shortcut_feedback = false
+shortcut_in_tooltip = false
 icon = ExtResource("18_mhno0")
 script = ExtResource("4_xxnij")
 

@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://bywfpsmb67vem"]
+[gd_resource type="Theme" format=3 uid="uid://bywfpsmb67vem"]
 
 [ext_resource type="FontFile" uid="uid://71h4hmqojm1m" path="res://fonts/OpenSans-Bold.ttf" id="1_aqrgg"]
 [ext_resource type="Texture2D" uid="uid://dvyiobp1i0tjf" path="res://images_ui/bouton_de_choix_focus.png" id="1_cfaem"]
